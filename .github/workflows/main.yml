@@ -43,13 +43,13 @@ jobs:
         
     - name: Compile with Nuitka
       run: |
-        python -m nuitka --standalone --onefile --assume-yes-for-downloads --follow-imports --output-filename=SideJITServer-windows.exe SideJITServer-main/SideJITServer/launch.py
+        python -m nuitka SideJITServer-main/SideJITServer/launch.py
         
     - name: Upload executable
       uses: actions/upload-artifact@v4
       with:
         name: SideJITServer-Windows
-        path: SideJITServer-windows.exe
+        path: SideJITServer-windows-x86_64.exe
         
   compile-linux:
     runs-on: ubuntu-latest
@@ -76,10 +76,10 @@ jobs:
         
     - name: Compile with Nuitka
       run: |
-        python -m nuitka --standalone --onefile --assume-yes-for-downloads --follow-imports --output-filename=SideJITServer-linux SideJITServer/launch.py
+        python -m nuitka SideJITServer-main/SideJITServer/launch.py
         
     - name: Upload executable
       uses: actions/upload-artifact@v4
       with:
         name: SideJITServer-Linux
-        path: SideJITServer-linux
+        path: SideJITServer-linux-x86_64.bin
