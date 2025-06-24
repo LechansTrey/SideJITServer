@@ -46,7 +46,7 @@ jobs:
         python -m nuitka --standalone --onefile --assume-yes-for-downloads --follow-imports --output-filename=SideJITServer-windows.exe SideJITServer/launch.py
         
     - name: Upload executable
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: SideJITServer-Windows
         path: SideJITServer-windows.exe
@@ -79,7 +79,7 @@ jobs:
         python -m nuitka --standalone --onefile --assume-yes-for-downloads --follow-imports --output-filename=SideJITServer-linux SideJITServer/launch.py
         
     - name: Upload executable
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: SideJITServer-Linux
         path: SideJITServer-linux
