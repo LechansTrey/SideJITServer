@@ -14,6 +14,16 @@
 #    nuitka-project: --include-module=jinxed.terminfo.xterm
 #    nuitka-project: --include-module=jinxed.terminfo.xterm_256color
 #    nuitka-project: --include-module=click
+#    nuitka-project: --include-module=plistlib
+#    nuitka-project: --include-module=json
+#    nuitka-project: --include-module=urllib
+#    nuitka-project: --include-module=urllib.request
+#    nuitka-project: --include-module=urllib.parse
+#    nuitka-project: --include-module=http
+#    nuitka-project: --include-module=http.server
+#    nuitka-project: --include-module=socketserver
+#    nuitka-project: --include-module=threading
+#    nuitka-project: --include-module=asyncio
 #    nuitka-project: --assume-yes-for-downloads
 ## nuitka-project: --user-package-configuration-file=../sidejitserver-nuitka-package.config.yml
 # nuitka-project-if: {OS} == "Linux":
