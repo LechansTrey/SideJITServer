@@ -1,0 +1,98 @@
+{
+  "__bytecode.const": {
+    "blob_name": ".bytecode",
+    "blob_size": 7724977,
+    "input_size": 7754937
+  },
+  "__constants.const": {
+    "blob_name": "",
+    "blob_size": 865,
+    "input_size": 2206
+  },
+  "module.SideJITServer.const": {
+    "blob_name": "SideJITServer",
+    "blob_size": 6148,
+    "input_size": 9967
+  },
+  "module.__main__.const": {
+    "blob_name": "__main__",
+    "blob_size": 365,
+    "input_size": 613
+  },
+  "module.__parents_main__.const": {
+    "blob_name": "__parents_main__",
+    "blob_size": 443,
+    "input_size": 848
+  },
+  "module.ansicon.const": {
+    "blob_name": "ansicon",
+    "blob_size": 1310,
+    "input_size": 2178
+  },
+  "module.jinxed._keys.const": {
+    "blob_name": "jinxed._keys",
+    "blob_size": 2320,
+    "input_size": 6336
+  },
+  "module.jinxed._terminal.const": {
+    "blob_name": "jinxed._terminal",
+    "blob_size": 1592,
+    "input_size": 2570
+  },
+  "module.jinxed._tparm.const": {
+    "blob_name": "jinxed._tparm",
+    "blob_size": 4208,
+    "input_size": 6491
+  },
+  "module.jinxed._util.const": {
+    "blob_name": "jinxed._util",
+    "blob_size": 766,
+    "input_size": 1325
+  },
+  "module.jinxed.const": {
+    "blob_name": "jinxed",
+    "blob_size": 861,
+    "input_size": 1330
+  },
+  "module.jinxed.terminfo.ansicon.const": {
+    "blob_name": "jinxed.terminfo.ansicon",
+    "blob_size": 1780,
+    "input_size": 4748
+  },
+  "module.jinxed.terminfo.const": {
+    "blob_name": "jinxed.terminfo",
+    "blob_size": 989,
+    "input_size": 1376
+  },
+  "module.jinxed.terminfo.vtwin10.const": {
+    "blob_name": "jinxed.terminfo.vtwin10",
+    "blob_size": 1067,
+    "input_size": 2147
+  },
+  "module.jinxed.terminfo.xterm.const": {
+    "blob_name": "jinxed.terminfo.xterm",
+    "blob_size": 3277,
+    "input_size": 3848
+  },
+  "module.jinxed.terminfo.xterm_256color.const": {
+    "blob_name": "jinxed.terminfo.xterm_256color",
+    "blob_size": 646,
+    "input_size": 1068
+  },
+  "module.jinxed.win32.const": {
+    "blob_name": "jinxed.win32",
+    "blob_size": 5782,
+    "input_size": 7682
+  },
+  "module.multiprocessing-postLoad.const": {
+    "blob_name": "multiprocessing-postLoad",
+    "blob_size": 364,
+    "input_size": 692
+  },
+  "module.multiprocessing-preLoad.const": {
+    "blob_name": "multiprocessing-preLoad",
+    "blob_size": 226,
+    "input_size": 471
+  },
+  "total": 2245
+}
