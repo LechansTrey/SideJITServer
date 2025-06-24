@@ -1,0 +1,85 @@
+name: Compile Executables
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  compile-windows:
+    runs-on: windows-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install nuitka ordered-set zstandard jinxed
+        
+    - name: Install project dependencies
+      run: |
+        if (Test-Path requirements.txt) {
+          pip install -r requirements.txt
+        }
+        
+    - name: Download WinTUN
+      run: |
+        $wintunUrl = "https://www.wintun.net/builds/wintun-0.14.1.zip"
+        $wintunZip = "wintun.zip"
+        try {
+          Invoke-WebRequest -Uri $wintunUrl -OutFile $wintunZip
+          Expand-Archive -Path $wintunZip -DestinationPath "."
+          Write-Host "WinTUN downloaded successfully"
+        } catch {
+          Write-Host "WinTUN download failed, continuing without it"
+        }
+        
+    - name: Compile with Nuitka
+      run: |
+        python -m nuitka --standalone --onefile --assume-yes-for-downloads --follow-imports --output-filename=SideJITServer-windows.exe SideJITServer/launch.py
+        
+    - name: Upload executable
+      uses: actions/upload-artifact@v3
+      with:
+        name: SideJITServer-Windows
+        path: SideJITServer-windows.exe
+        
+  compile-linux:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install nuitka ordered-set zstandard
+        
+    - name: Install project dependencies
+      run: |
+        if [ -f requirements.txt ]; then
+          pip install -r requirements.txt
+        fi
+        
+    - name: Compile with Nuitka
+      run: |
+        python -m nuitka --standalone --onefile --assume-yes-for-downloads --follow-imports --output-filename=SideJITServer-linux SideJITServer/launch.py
+        
+    - name: Upload executable
+      uses: actions/upload-artifact@v3
+      with:
+        name: SideJITServer-Linux
+        path: SideJITServer-linux
