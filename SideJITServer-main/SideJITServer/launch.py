@@ -14,8 +14,8 @@
 #    nuitka-project: --include-module=click
 #    nuitka-project: --include-module=zeroconf
 #    nuitka-project: --include-module=pymobiledevice3
-#    nuitka-project: --include-package=SideJITServer
-#    nuitka-project: --include-package-data=SideJITServer
+#    nuitka-project: --include-package=SideJITServer-main.SideJITServer
+#    nuitka-project: --include-package-data=SideJITServer-main.SideJITServer
 #    nuitka-project: --follow-stdlib
 #    nuitka-project: --assume-yes-for-downloads
 # nuitka-project-if: {OS} == "Linux":
