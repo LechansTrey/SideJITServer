@@ -13,6 +13,7 @@
 #    nuitka-project: --include-module=jinxed.terminfo.ansicon
 #    nuitka-project: --include-module=jinxed.terminfo.xterm
 #    nuitka-project: --include-module=jinxed.terminfo.xterm_256color
+#    nuitka-project: --include-module=click
 #    nuitka-project: --assume-yes-for-downloads
 ## nuitka-project: --user-package-configuration-file=../sidejitserver-nuitka-package.config.yml
 # nuitka-project-if: {OS} == "Linux":
