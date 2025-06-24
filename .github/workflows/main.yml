@@ -25,11 +25,11 @@ jobs:
         
     - name: Install project dependencies
       run: |
-        if (Test-Path requirements.txt) {
-          pip install -r requirements.txt
+        if (Test-Path SideJITServer-main/requirements.txt) {
+          pip install -r SideJITServer-main/requirements.txt
         } else {
-          Write-Host "Installing all required dependencies"
-          pip install click asyncio plistlib zeroconf pymobiledevice3
+          Write-Host "No requirements.txt found, installing basic dependencies"
+          pip install click
         }
         
     - name: Download WinTUN
