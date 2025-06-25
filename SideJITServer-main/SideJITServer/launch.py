@@ -17,6 +17,8 @@
 #    nuitka-project: --include-package=SideJITServer-main.SideJITServer
 #    nuitka-project: --include-package-data=SideJITServer-main.SideJITServer
 #    nuitka-project: --follow-stdlib
+#    nuitka-project: --include-module=ipsw_parser
+#    nuitka-project: --include-module=ipsw_parser.img4
 #    nuitka-project: --assume-yes-for-downloads
 # nuitka-project-if: {OS} == "Linux":
 #    nuitka-project: --output-filename=SideJITServer-linux-x86_64.bin
