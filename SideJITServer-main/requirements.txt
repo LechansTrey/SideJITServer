@@ -1,3 +1,4 @@
 pymobiledevice3>=4.18.0,<4.19.0
 zeroconf>=0.132.2
 click
+ipsw-parser
